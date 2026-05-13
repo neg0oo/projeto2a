@@ -1,4 +1,6 @@
-* Reset básico */
+/* Importação de fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,123 +8,152 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header */
+/* Header Vibrante */
 header {
     background: #ffffff;
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 5px solid #ffcc00; /* Linha amarela no topo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 header .container {
-    display: table;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    display: table-cell;
-    font-size: 1.5rem;
-    color: #1a2a6c;
-    vertical-align: middle;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #1a5fb4; /* Azul vibrante */
 }
 
 .logo span {
-    color: #f2a900;
-}
-
-nav {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
+    color: #e67e22; /* Laranja educativo */
 }
 
 nav ul {
+    display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #2c3e50;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* Hero Section */
+nav ul li a:hover {
+    color: #1a5fb4;
+}
+
+.btn-contato {
+    background: #1a5fb4;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+/* Hero com Gradiente e Cor */
 .hero {
-    background: linear-gradient(rgba(26, 42, 108, 0.7), rgba(26, 42, 108, 0.7)), 
-                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(135deg, rgba(26, 95, 180, 0.9), rgba(46, 204, 113, 0.8)), 
+                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
-    padding: 100px 20px;
+    padding: 120px 0;
     text-align: center;
     color: white;
 }
 
 .hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.btn {
+.hero-content h2 span {
+    color: #ffcc00;
+}
+
+.btn-main {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background: #f2a900;
-    color: #fff;
+    background: #ffcc00;
+    color: #2c3e50;
+    padding: 15px 40px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 0 #d4aa00;
+    transition: 0.2s;
 }
 
-/* Diferenciais */
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #d4aa00;
+}
+
+/* Cards Coloridos */
 .features {
-    padding: 60px 0;
-    background: #f4f4f4;
+    padding: 80px 0;
 }
 
 .features .container {
-    display: table;
-    width: 100%;
-    border-spacing: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
-    display: table-cell;
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
+    flex: 1;
+    min-width: 280px;
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
     text-align: center;
-    width: 33.33%;
+    transition: 0.3s;
 }
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card-blue { background: #3498db; }
+.card-yellow { background: #f1c40f; color: #2c3e50; }
+.card-green { background: #2ecc71; }
 
 .card h3 {
     margin-bottom: 15px;
-    color: #1a2a6c;
+    font-size: 1.5rem;
 }
 
 /* Rodapé */
 footer {
-    background: #1a2a6c;
+    background: #2c3e50;
     color: white;
+    padding: 30px 0;
     text-align: center;
-    padding: 20px 0;
+    border-top: 5px solid #1a5fb4;
+}
